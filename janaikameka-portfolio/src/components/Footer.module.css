@@ -1,0 +1,28 @@
+.footer {
+  padding: 3rem 1.5rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 4rem 1.5rem;
+  }
+
+  p {
+    margin: 0.25rem 0;
+  }
+}
+
