@@ -8,7 +8,7 @@ export function About() {
         <h2>About</h2>
         <div className={styles.content}>
           <p>
-            I'm a software engineer and Scrum Master passionate about building
+            I'm a software engineer and scrum master passionate about building
             scalable solutions and delivering projects that matter. With
             experience across startups and Fortune 500 companies, I've worn many
             hats: from fullstack development to technical leadership and agile

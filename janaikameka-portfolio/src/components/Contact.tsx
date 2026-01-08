@@ -32,13 +32,13 @@ export function Contact() {
           >
             GitHub
           </a>
-          <a
+          {/* <a
             href={profile.links.articles}
             target="_blank"
             rel="noopener noreferrer"
           >
             Articles
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

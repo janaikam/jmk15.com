@@ -19,9 +19,11 @@ export function Projects() {
                 ))}
               </div>
               <div className={styles.links}>
-                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                  Repository
-                </a>
+                {project.repoUrl && (
+                  <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                    Repository
+                  </a>
+                )}
                 {project.liveUrl && (
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     Live Demo

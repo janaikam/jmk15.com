@@ -17,11 +17,11 @@ export const profile: Profile = {
   headline: 'Software Engineer & Scrum Master',
   tagline: 'Building scalable solutions and delivering projects on time.',
   location: 'Atlanta, GA',
-  email: 'janai@example.com',
+  email: 'janaiescuela@gmail.com',
   links: {
-    github: 'https://github.com/janaikameka',
-    linkedin: 'https://linkedin.com/in/janaikameka',
+    github: 'https://github.com/janaikam',
+    linkedin: 'https://www.linkedin.com/in/janai-k-00a67618a/',
     articles: 'https://github.com/janaikameka.io',
   },
-  interests: ['Crochet', 'Fantasy Books', 'Anime', 'Sewing'],
+  interests: ['Crochet', 'Reading', 'Watching Anime', 'Sewing'],
 };
