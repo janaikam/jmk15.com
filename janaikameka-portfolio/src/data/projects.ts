@@ -39,7 +39,7 @@ export const projects: Project[] = [
     description:
       'Fast, accessible single-page portfolio built with React, TypeScript, and Vite.',
     tags: ['React', 'TypeScript', 'Vite', 'CSS'],
-    repoUrl: 'https://github.com/janaikameka/portfolio',
+    repoUrl: 'https://github.com/janaikam/jmk15.com',
     // liveUrl: 'https://janaikameka.com',
   },
 ];
