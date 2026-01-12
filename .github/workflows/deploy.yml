@@ -27,17 +27,20 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: janaikameka-portfolio/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: janaikameka-portfolio
 
       - name: Build project
         run: npm run build
+        working-directory: janaikameka-portfolio
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: janaikameka-portfolio/dist
 
   deploy:
     needs: build
