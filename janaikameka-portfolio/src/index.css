@@ -11,6 +11,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section {
+  scroll-margin-top: 80px;
+}
+
 #root {
   display: flex;
   flex-direction: column;

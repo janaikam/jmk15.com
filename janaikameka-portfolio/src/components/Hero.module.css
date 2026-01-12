@@ -1,16 +1,54 @@
 .hero {
+  position: relative;
   min-height: 100vh;
+  width: 100%;
+
+  /* background-image: url('src/assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background: var(--bg);
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg);
+
   padding: 4rem 1.5rem;
   text-align: center;
+
+  animation: heroFade 0.8s ease-out both;
+
+  overflow: hidden;
 }
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: color-mix(in srgb, var(--bg) 50%, transparent);
+
+  z-index: 0;
+} */
 
 .container {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -23,8 +61,15 @@ h1 {
 .headline {
   font-size: 1.5rem;
   color: var(--primary);
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   font-weight: 600;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 0 0 2rem 0;
+  font-weight: 500;
 }
 
 .roleToggle {
@@ -64,6 +109,18 @@ h1 {
   line-height: 1.6;
   color: var(--muted);
   margin: 2rem 0;
+  animation: fadeSwap 0.4s ease;
+}
+
+@keyframes fadeSwap {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cta {
@@ -128,4 +185,28 @@ h1 {
     padding: 1rem 2.5rem;
   }
 }
+
+/* .logoWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.logoWrapper img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.logoDark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logoLight {
+    display: none;
+  }
+
+  .logoDark {
+    display: block;
+  }
+} */
 

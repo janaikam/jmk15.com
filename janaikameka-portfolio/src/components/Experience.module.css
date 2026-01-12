@@ -34,7 +34,8 @@ h2 {
 
 .card {
   padding: 2rem;
-  background: var(--bg);
+  background-color: #F8FAFC;
+  /* background: var(--bg); */
   border-radius: 8px;
   border-left: 4px solid var(--primary);
   transition: all 0.3s;

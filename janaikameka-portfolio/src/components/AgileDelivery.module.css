@@ -30,7 +30,8 @@ h2 {
 
 .card {
   padding: 2rem;
-  background: var(--bg);
+  background-color: #F8FAFC;
+  /* background: var(--bg); */
   border-radius: 8px;
   border: 1px solid var(--border);
   transition: all 0.3s;

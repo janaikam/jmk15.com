@@ -20,14 +20,21 @@ function App() {
   })
 
   useEffect(() => {
-    const root = document.documentElement
-    if (isDark) {
-      root.setAttribute('data-theme', 'dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      root.removeAttribute('data-theme')
-      localStorage.setItem('theme', 'light')
+    //Fixes Scroll Restoration on reload
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
     }
+    window.scrollTo(0, 0)
+    const root = document.documentElement
+    root.classList.toggle('dark', isDark)
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    // if (isDark) {
+    //   root.setAttribute('data-theme', 'dark')
+    //   localStorage.setItem('theme', 'dark')
+    // } else {
+    //   root.removeAttribute('data-theme')
+    //   localStorage.setItem('theme', 'light')
+    // }
   }, [isDark])
 
   return (

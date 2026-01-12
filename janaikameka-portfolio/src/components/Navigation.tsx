@@ -1,5 +1,7 @@
 import { profile } from '../data/profile';
 import styles from './Navigation.module.css';
+import headerLogoLight from '../assets/header logo light.jpg';
+import headerLogoDark from '../assets/header logo dark.jpg';
 
 interface NavigationProps {
   isDark: boolean;
@@ -22,7 +24,17 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
     <nav className={styles.nav}>
       <div className={styles.container}>
         <a href="#home" className={styles.logo}>
-          {profile.name}
+          <img
+            src={headerLogoLight}
+            alt="Header Logo"
+            className={`${styles.logoImage} ${styles.logoLight}`}
+          />
+          <img
+            src={headerLogoDark}
+            alt="Header Logo"
+            className={`${styles.logoImage} ${styles.logoDark}`}
+          />
+          {/* {profile.name} */}
         </a>
         <ul className={styles.links}>
           {sections.map((section) => (

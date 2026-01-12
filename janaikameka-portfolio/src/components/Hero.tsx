@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { profile } from '../data/profile';
 import styles from './Hero.module.css';
+// import logoLight from '../assets/logo light.jpg';
+// import logoDark from '../assets/logo dark.jpg';
 
 export function Hero() {
   const [role, setRole] = useState<'engineer' | 'pm'>('engineer');
@@ -11,10 +13,16 @@ export function Hero() {
     'Scrum Master and technical leader driving sprint delivery, risk management, and cross-functional collaboration.';
 
   return (
-    <section id="home" className={styles.hero}>
+    <section id="home" className={styles.hero} /*style={{ backgroundImage: 'url(src/assets/hero.jpg)' }}*/>
       <div className={styles.container}>
+        {/* <div className={styles.logoWrapper}>
+        <img src={logoLight} alt="Logo Light" className={styles.logoLight} />
+        <img src={logoDark} alt="Logo Dark" className={styles.logoDark} />
+        </div> */}
+
         <h1>{profile.name}</h1>
         <p className={styles.headline}>{profile.headline}</p>
+        <p className={styles.tagline}>{profile.tagline}</p>
 
         <div className={styles.roleToggle}>
           <button
@@ -31,7 +39,7 @@ export function Hero() {
           </button>
         </div>
 
-        <p className={styles.description}>
+        <p key={role} className={styles.description}>
           {role === 'engineer' ? engineerText : pmText}
         </p>
 
