@@ -1,4 +1,4 @@
-import { profile } from '../data/profile';
+// import { profile } from '../data/profile';
 import styles from './Navigation.module.css';
 import headerLogoLight from '../assets/header logo light.jpg';
 import headerLogoDark from '../assets/header logo dark.jpg';
