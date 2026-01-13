@@ -1,5 +1,6 @@
 // import { profile } from '../data/profile';
 import styles from './Navigation.module.css';
+import { useState, useEffect } from 'react';
 import headerLogoLight from '../assets/logo light.png';
 import headerLogoDark from '../assets/logo dark.png';
 
@@ -19,11 +20,17 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
     { id: 'hobbies', label: 'Hobbies' },
     { id: 'contact', label: 'Contact' },
   ];
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+  // Prevent background scroll when menu is open (mobile UX win)
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
+  }, [menuOpen]);
 
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <a href="#home" className={styles.logo}>
+        <a href="#home" className={styles.logo} onClick={() => setMenuOpen(false)}>
           <img
             src={headerLogoLight}
             alt="Header Logo"
@@ -43,10 +50,39 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
             </li>
           ))}
         </ul>
-        <button className={styles.darkToggle} onClick={onToggleDark} aria-label="Toggle dark mode">
-          {isDark ? '☀️' : '🌙'}
-        </button>
+        <div className={styles.controls}>
+          <button className={styles.darkToggle} onClick={onToggleDark} aria-label="Toggle dark mode">
+            {isDark ? '☀️' : '🌙'}
+          </button>
+
+          {/* Hamburger (mobile only) */}
+          <button
+            className={styles.hamburger}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            ☰
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className={styles.mobileMenu}>
+          <ul>
+            {sections.map((section) => (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {section.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

@@ -110,3 +110,51 @@
   }
 }
 
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s; */
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 72px; /* adjust to navbar height */
+    left: 0;
+    width: 100%;
+    background: var(--background, #FFFFFF);
+    padding: 1.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+
+  .mobileMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mobileMenu a {
+    font-size: 1.1rem;
+  }
+}
