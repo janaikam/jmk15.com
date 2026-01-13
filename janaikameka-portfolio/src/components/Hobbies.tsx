@@ -3,7 +3,7 @@ import styles from './Hobbies.module.css';
 export function Hobbies() {
   const hobbies = [
     {
-      name: 'Crochet',
+      name: 'Crocheting',
       description:
         'Creating intricate clothes and blankets. The meditative process mirrors problem-solving in code.',
     },
@@ -13,7 +13,7 @@ export function Hobbies() {
         'Deep dives into epic fantasy worlds and diverse characters. Fuels creativity and imagination in design thinking.',
     },
     {
-      name: 'Anime',
+      name: 'Watching Anime',
       description:
         'Appreciating storytelling, animation, and cultural narratives. Always exploring fresh perspectives.',
     },

@@ -23,5 +23,5 @@ export const profile: Profile = {
     linkedin: 'https://www.linkedin.com/in/janai-k-00a67618a/',
     articles: 'https://github.com/janaikameka.io',
   },
-  interests: ['Crochet', 'Reading', 'Watching Anime', 'Sewing'],
+  interests: ['Crocheting', 'Reading', 'Watching Anime', 'Sewing'],
 };
