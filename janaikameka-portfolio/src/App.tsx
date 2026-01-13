@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Navigation } from './components/Navigation'
+import { BackToTop } from './components/BackToTop'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
 import { Projects } from './components/Projects'
@@ -50,6 +51,7 @@ function App() {
         <Hobbies />
         <Contact />
       </main>
+      <BackToTop />
       <Footer />
     </>
   )
