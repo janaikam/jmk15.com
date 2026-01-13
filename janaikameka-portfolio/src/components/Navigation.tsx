@@ -21,7 +21,15 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
     { id: 'contact', label: 'Contact' },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
-  
+
+  const handleToggleDark = () => {
+    const scrollY = window.scrollY;
+    onToggleDark();
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: scrollY });
+    });
+  };
+
   // Prevent background scroll when menu is open (mobile UX win)
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
@@ -51,7 +59,7 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
           ))}
         </ul>
         <div className={styles.controls}>
-          <button className={styles.darkToggle} onClick={onToggleDark} aria-label="Toggle dark mode">
+          <button type="button" onClick={handleToggleDark} aria-label="Toggle dark mode">
             {isDark ? '☀️' : '🌙'}
           </button>
 

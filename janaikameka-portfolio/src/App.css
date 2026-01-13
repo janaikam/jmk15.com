@@ -16,6 +16,7 @@
 
   color-scheme: light;
   --nav-background: #ffffff;
+  /* --bg-contrast: #F8FAFC */
 }
 
 /* Dark theme */
@@ -36,6 +37,7 @@
 
   color-scheme: dark;
   --nav-background: #121212;
+  /* --bg-contrast: #1F2937; */
 }
 
 * {
