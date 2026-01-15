@@ -47,8 +47,8 @@ export function Hero() {
           <a
             href={
               role === 'engineer'
-                ? './resumes/Janai K General Resume.pdf'
-                : './resumes/Janai K Scrum Master Resume.pdf'
+                ? './resumes/Janai Kameka_Software Engineer.pdf'
+                : './resumes/Janai Kameka_Scrum Master Resume.pdf'
             }
             className={styles.primaryBtn}
             download
