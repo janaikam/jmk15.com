@@ -3,6 +3,7 @@
   --bg: #e5eaf5;
   --surface: #FFFFFF;
   --text: #0F172A;
+  /* --paragraph: #808bcd; */
   --muted: #8995a7;
   --border: #E2E8F0;
 
@@ -123,3 +124,7 @@ button {
     scroll-behavior: auto !important;
   }
 }
+
+/* p {
+  color: var(--paragraph);
+} */
