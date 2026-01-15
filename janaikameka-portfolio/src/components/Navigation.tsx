@@ -38,6 +38,15 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
+        {/* Hamburger moved outside of .controls so it can be positioned on the left */}
+        <button
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+
         <a href="#home" className={styles.logo} onClick={() => setMenuOpen(false)}>
           <img
             src={headerLogoLight}
@@ -49,7 +58,6 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
             alt="Header Logo"
             className={`${styles.logoImage} ${styles.logoDark}`}
           />
-          {/* {profile.name} */}
         </a>
         <ul className={styles.links}>
           {sections.map((section) => (
@@ -61,15 +69,6 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
         <div className={styles.controls}>
           <button type="button" onClick={handleToggleDark} aria-label="Toggle dark mode">
             {isDark ? '☀️' : '🌙'}
-          </button>
-
-          {/* Hamburger (mobile only) */}
-          <button
-            className={styles.hamburger}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle navigation menu"
-          >
-            ☰
           </button>
         </div>
       </div>

@@ -51,6 +51,7 @@
   align-items: center;
 }
 
+
 .logo {
   font-size: 1.25rem;
   font-weight: 700;
@@ -134,8 +135,36 @@
     display: none;
   }
 
+  /* Center the logo in the navbar on small screens */
+  .container {
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Add left padding so logo doesn't overlap the left hamburger */
+  .logo {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* Show hamburger and position it on the left */
   .hamburger {
     display: block;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  /* Keep other controls (e.g., dark toggle) on the right */
+  .controls {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+    z-index: 1001;
   }
 
   .mobileMenu {
