@@ -37,7 +37,7 @@ export const projects: Project[] = [
     id: 'portfolio-site',
     title: 'Portfolio Site',
     description:
-      'Fast, accessible single-page portfolio built with React, TypeScript, and Vite.',
+      'Fast, accessible single-page portfolio built with React, TypeScript, and Vite. Utilizing github copilot to efficiently generate code snippets and optimize development workflow.',
     tags: ['React', 'TypeScript', 'Vite', 'CSS'],
     repoUrl: 'https://github.com/janaikam/jmk15.com',
     // liveUrl: 'https://janaikameka.com',

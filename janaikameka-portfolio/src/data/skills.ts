@@ -34,6 +34,7 @@ export const skills: SkillGroup[] = [
       'Agile Methodologies',
       'Web Scraping',
       'Test-Driven Development',
+      'Github Copilot',
     ],
   },
 ];
