@@ -1,6 +1,6 @@
 // import { profile } from '../data/profile';
 import styles from './Navigation.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import headerLogoLight from '../assets/logo light.png';
 import headerLogoDark from '../assets/logo dark.png';
 
@@ -35,17 +35,20 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
   }, [menuOpen]);
 
+  
+
   return (
     <nav className={styles.nav}>
+      {/* Hamburger moved outside of the centered container so it can sit at the viewport edge */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
+      >
+        ☰
+      </button>
+
       <div className={styles.container}>
-        {/* Hamburger moved outside of .controls so it can be positioned on the left */}
-        <button
-          className={styles.hamburger}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
-        >
-          ☰
-        </button>
 
         <a href="#home" className={styles.logo} onClick={() => setMenuOpen(false)}>
           <img
@@ -67,7 +70,7 @@ export function Navigation({ isDark, onToggleDark }: NavigationProps) {
           ))}
         </ul>
         <div className={styles.controls}>
-          <button type="button" onClick={handleToggleDark} aria-label="Toggle dark mode">
+          <button className={styles.darkToggle} type="button" onClick={handleToggleDark} aria-label="Toggle dark mode">
             {isDark ? '☀️' : '🌙'}
           </button>
         </div>

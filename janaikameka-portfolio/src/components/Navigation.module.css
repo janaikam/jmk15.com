@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -90,7 +90,7 @@
   border: none;
   font-size: 1.25rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.25rem;
   border-radius: 4px;
   transition: background 0.2s;
 }
@@ -137,43 +137,39 @@
 
   /* Center the logo in the navbar on small screens */
   .container {
-    justify-content: center;
-    position: relative;
+    display: contents;
   }
 
-  /* Add left padding so logo doesn't overlap the left hamburger */
+ 
   .logo {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    position: static;
+    justify-self: center;
+    transform: none;
+    grid-column: 2;
   }
 
   /* Show hamburger and position it on the left */
   .hamburger {
     display: block;
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001;
+    justify-self: start;
+    grid-column: 1;
+    /* position: absolute; */
   }
 
   /* Keep other controls (e.g., dark toggle) on the right */
   .controls {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 0;
-    z-index: 1001;
+    position: static;
+    justify-self: end;
+    grid-column: 3;
   }
 
   .mobileMenu {
     position: fixed;
-    top: 72px; /* adjust to navbar height */
+    top: 64px; /* slightly reduced to match tighter navbar */
     left: 0;
     width: 100%;
     background: var(--background, #FFFFFF);
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     z-index: 999;
   }
@@ -187,5 +183,18 @@
 
   .mobileMenu a {
     font-size: 1.1rem;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+  }
+
+  .logoImage {
+    margin-right: 0;
   }
 }
